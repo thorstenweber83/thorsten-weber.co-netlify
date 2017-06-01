@@ -1,0 +1,4 @@
+backend:
+  name: bitbucket
+  repo: cptchaos83/thorsten-weber.co-netlify
+  branch: master
