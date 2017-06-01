@@ -2,3 +2,4 @@ backend:
   name: bitbucket
   repo: cptchaos83/thorsten-weber.co-netlify
   branch: master
+  media_folder: assets/img/uploads
