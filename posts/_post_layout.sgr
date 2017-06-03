@@ -1,0 +1,9 @@
+doctype html
+html
+  head
+    title {{ title }}
+  body
+    h1 {{ title }}
+    h3.author by {{ author }}
+    .content(md)
+      block(name='content')

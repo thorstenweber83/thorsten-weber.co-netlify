@@ -28,7 +28,8 @@
   "private": true,
   "repository": "https://github.com//thorsten-weber-co",
   "scripts": {
-    "build": "spike compile",
+    "compile": "spike compile",
+    "watch": "spike watch",
     "lint": "standard | snazzy",
     "precommit": "npm run lint -s",
     "pretest": "npm run lint -s",

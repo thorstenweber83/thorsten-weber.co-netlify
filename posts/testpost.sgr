@@ -1,0 +1,11 @@
+---
+title: 'Intro Post'
+author: 'Jeff'
+---
+
+extends(src='_post_layout.sgr')
+block(name='content')
+  # Hello world!
+
+  This is my first post. What a **cool** post!
+

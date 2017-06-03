@@ -27,3 +27,9 @@ extends(src='layout.sgr')
     p Customize your settings by editing the
       a(href="https://spike.readme.io/docs/appjs") app.js
       |  file or simply start by editing this view
+
+    h2 test
+
+    ul
+      each(loop='post of _collections.posts')
+        li: a(href='{{ post._path }}') {{ post.title }}
