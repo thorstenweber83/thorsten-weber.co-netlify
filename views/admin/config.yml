@@ -1,8 +1,8 @@
 backend:
-  #  name: bitbucket
-  name: github
-  #  repo: cptchaos83/thorsten-weber.co-netlify
-  repo: thorstenweber83/thorsten-weber.co-netlify
+  name: bitbucket
+  #name: github
+  repo: cptchaos83/thorsten-weber.co-netlify
+  #repo: thorstenweber83/thorsten-weber.co-netlify
   branch: master
 
 media_folder: assets/img/uploads
