@@ -4,7 +4,9 @@ const jsStandards = require('spike-js-standards')
 const pageId = require('spike-page-id')
 const Collections = require('spike-collections')
 
-const locals = {}
+const locals = {
+  foo: 'bar'
+}
 const collections = new Collections({
   addDataTo: locals,
   collections: {
@@ -18,14 +20,19 @@ module.exports = {
     html: '*(**/)*.sgr',
     css: '*(**/)*.sss'
   },
-  ignore: ['**/layout.sgr', '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
+  ignore: [
+    '**/layout.sgr',
+    '**/_*',
+    '**/.*',
+    'readme.md',
+    'yarn.lock',
+    '!**/_redirects'
+  ],
   reshape: htmlStandards({
-    locals: (ctx) => {return collections.locals(ctx, locals)}
+    locals: (ctx) => { return collections.locals(ctx, locals) }
     //  { pageId: pageId(ctx), foo: 'bar'}
-    
   }),
   postcss: cssStandards(),
   babel: jsStandards(),
   plugins: [collections]
 }
-
