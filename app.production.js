@@ -4,7 +4,7 @@ const {UglifyJsPlugin} = require('webpack').optimize
 
 module.exports = {
   // disable source maps
-  devtool: false,
+  // devtool: false,
   // minify js
   plugins: [new UglifyJsPlugin()],
   // minify html and css
