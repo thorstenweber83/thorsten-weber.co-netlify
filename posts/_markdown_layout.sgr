@@ -1,0 +1,9 @@
+doctype html
+html
+  head
+    title {{ title }}
+    style body{ background-color: red;}
+  body
+    h1 {{ title }}
+    h3.author by {{ author }}
+    block(name='content')

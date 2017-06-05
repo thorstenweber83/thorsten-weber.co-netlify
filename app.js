@@ -17,7 +17,7 @@ const collections = new Collections({
 module.exports = {
   devtool: 'source-map',
   matchers: {
-    html: '*(**/)*.sgr',
+    html: '*(**/)*.{sgr,md}',
     css: '*(**/)*.sss'
   },
   ignore: [
@@ -26,13 +26,29 @@ module.exports = {
     '**/.*',
     'readme.md',
     'yarn.lock',
-    '!**/_redirects'
+    '!**/_redirects' // still not working...
   ],
   reshape: htmlStandards({
     locals: (ctx) => { return collections.locals(ctx, locals) }
-    //  { pageId: pageId(ctx), foo: 'bar'}
+    // locals: { pageId: pageId(ctx), foo: 'bar'}
   }),
   postcss: cssStandards(),
   babel: jsStandards(),
-  plugins: [collections]
+  plugins: [
+    collections
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.md$/,
+        use: [{
+          loader: './util/layout-loader',
+          options: {
+            layout: '_markdown_layout.sgr'
+          }
+        }],
+        enforce: 'pre'
+      }
+    ]
+  }
 }

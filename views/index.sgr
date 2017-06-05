@@ -32,4 +32,4 @@ extends(src='layout.sgr')
 
     ul
       each(loop='post of _collections.posts')
-        li: a(href='{{ post._path }}') {{ post.title }}
+        li: a(href='{{ post._path }}') {{ post.title }} {{ post.rating }}

@@ -1,5 +1,5 @@
 ---
-title: 'Intro Post'
+title: 'sugarml Post'
 author: 'Jeff'
 ---
 
@@ -8,4 +8,4 @@ block(name='content')
   # Hello world!
 
   This is my first post. What a **cool** post!
-
+  but we really want pure .md support!
